@@ -9,14 +9,18 @@ import Card from '../components/Card';
 import Container from '../components/Container';
 import Pagination from '../components/Pagination';
 import Summary from '../components/Summary';
+import Button from '../components/Button';
 
 const IndexPage = ({ pageContext }) => {
   const { group, index, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
   const nextUrl = (index + 1).toString();
+
+  
   return (
     <Layout>
       <Container>
+        <Button to="http://rt.com">plplplplp</Button>
         <Helmet
           title={`${userConfig.title} | ${userConfig.author}`}
           htmlAttributes={{ lang: 'en' }}
